@@ -24,6 +24,7 @@
     .panel { display: none; }
     .panel.active { display: block; animation: appear 360ms ease-out both; }
     .eyebrow { margin: 0 0 16px; color: var(--signal); font: 700 12px/1 Arial, sans-serif; letter-spacing: .15em; text-transform: uppercase; }
+    .brand-kicker { margin: 0 0 12px; color: var(--signal); font: 700 16px/1 Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; }
     h1, h2 { font-weight: normal; }
     h1 { max-width: 810px; margin: 0; font-size: clamp(46px, 8vw, 102px); line-height: .94; letter-spacing: 0; }
     .intro { max-width: 560px; margin: 34px 0 0; font-size: clamp(19px, 2.2vw, 26px); line-height: 1.45; }
@@ -43,6 +44,10 @@
     .content-sheet li + li { margin-top: 8px; }
     .contact-link { color: var(--signal); font-weight: bold; text-decoration-thickness: 1px; text-underline-offset: 4px; }
     .site-footer { width: min(1160px, calc(100% - 48px)); margin: 0 auto; padding: 22px 0 28px; display: flex; justify-content: space-between; align-items: center; gap: 16px; border-top: 1px solid var(--line); color: var(--muted); font: 13px/1.4 Arial, sans-serif; }
+    .footer-meta { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+    .footer-youtube { color: var(--muted); }
+    .footer-youtube a { color: var(--signal); font-weight: 700; text-decoration: none; }
+    .footer-youtube a:hover, .footer-youtube a:focus-visible { text-decoration: underline; text-underline-offset: 3px; }
     .legal-links { display: flex; gap: 18px; }
     .legal-links button { border: 0; padding: 0; color: var(--muted); background: transparent; font: inherit; text-decoration: underline; text-underline-offset: 3px; cursor: pointer; }
     .legal-links button:hover, .legal-links button:focus-visible { color: var(--signal); }
@@ -80,9 +85,10 @@
   </header>
   <main>
     <section class="panel active" id="history" role="tabpanel" aria-labelledby="history-tab">
-      <p class="eyebrow">Clubstation HB9GT</p>
+      <p class="brand-kicker">Clubstation HB9GT</p>
       <h1>Funk verbindet<br>Menschen.</h1>
       <p class="intro">HB9GT ist eine Amateurfunk-Clubstation. Wir teilen technische Neugier, Freude am Funkverkehr und die Bereitschaft, Kommunikation möglich zu machen.</p>
+      <p class="intro" style="margin-top: 10px;"><a href="https://www.youtube.com/@HB9GT" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-underline-offset: 4px;">HB9GT - YouTube</a></p>
       <div class="divider"></div>
       <div class="facts" aria-label="Schwerpunkte der Clubstation">
         <div class="fact"><span class="fact-label">Rufzeichen</span><span class="fact-value">HB9GT</span></div>
@@ -106,15 +112,18 @@
     </section>
   </main>
   <footer class="site-footer">
-    <span>&copy; <span id="year"></span> HB9GT</span>
+    <div class="footer-meta">
+      <span>&copy; <span id="year"></span> HB9GT</span>
+      <span class="footer-youtube">Mehr Videos und Einblicke auf <a href="https://www.youtube.com/@HB9GT" target="_blank" rel="noopener noreferrer">HB9GT - YouTube</a></span>
+    </div>
     <div class="legal-links"><button type="button" data-dialog="impressum">Impressum</button><button type="button" data-dialog="datenschutz">Datenschutz</button></div>
   </footer>
   <dialog id="impressum" aria-labelledby="impressum-title">
     <button class="close-dialog" type="button" aria-label="Impressum schliessen">&times;</button>
     <div class="legal-content">
       <p class="eyebrow">Entwurf</p><h2 id="impressum-title">Impressum</h2>
-      <h3>Verantwortliche Stelle</h3><p>Amateurfunk Clubstation HB9GT<br>[Name des Vereins oder der verantwortlichen Person]<br>[Strasse und Hausnummer]<br>[PLZ Ort], Schweiz</p>
-      <h3>Kontakt</h3><p>E-Mail: [offizielle E-Mail-Adresse]<br>Telefon: [Telefonnummer, falls vorhanden]</p>
+      <h3>Verantwortliche Stelle</h3><p>Amateurfunk Clubstation HB9GT<br>Sekretariat: Ravaldo Guerrini<br>HB9DOJ<br>Sennereistrasse 4b<br>8732 Neuhaus CH</p>
+      <h3>Kontakt</h3><p>Tel: 079 200 14 14<br>E-Mail: <a class="contact-link" href="mailto:guerrini@l-auto.ch">guerrini@l-auto.ch</a></p>
       <h3>Haftungshinweis</h3><p>Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte wird keine Gewähr übernommen. Für Inhalte externer Links sind ausschliesslich deren Betreiber verantwortlich.</p>
       <h3>Urheberrecht</h3><p>Texte, Bilder und weitere Inhalte dieser Website dürfen ohne Zustimmung der Rechteinhaber nicht weiterverwendet werden, soweit dies nicht gesetzlich erlaubt ist.</p>
     </div>
